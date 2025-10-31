@@ -1,0 +1,137 @@
+/**
+ * Estilos para el Gráfico de Fuerza vs Distancia
+ */
+
+.force-distance-graph {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+.force-distance-graph h3 {
+  color: #60a5fa;
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.graph-container {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  min-height: 540px; /* Espacio para canvas más grande */
+}
+
+.graph-canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.graph-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  text-align: center;
+}
+
+.stat-box .stat-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-box .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-box .stat-value.highlight {
+  color: #10b981;
+}
+
+.stat-box .stat-value.dim {
+  color: #64748b;
+}
+
+.graph-insight {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.graph-insight .insight-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.graph-insight .insight-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.graph-insight .insight-text strong {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .force-distance-graph {
+    padding: 16px;
+  }
+
+  .graph-container {
+    padding: 10px;
+  }
+
+  .graph-canvas {
+    width: 100%;
+  }
+
+  .graph-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .force-distance-graph h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box .stat-value {
+    font-size: 1.3rem;
+  }
+}
