@@ -1,0 +1,349 @@
+/**
+ * Estilos para el Modal de Explicación de Fuerza Magnética
+ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  position: relative;
+  color: #e2e8f0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: scale(1.1);
+}
+
+.modal-content h2 {
+  color: #3b82f6;
+  margin: 0 0 24px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.modal-content h3 {
+  color: #60a5fa;
+  margin: 24px 0 12px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.explanation-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.explanation-section.highlight {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.explanation-section.insight {
+  background: rgba(139, 92, 246, 0.05);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.explanation-section.summary {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.formula-box {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 1.1rem;
+  margin: 12px 0;
+  border-left: 4px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formula-box.incorrect {
+  border-left-color: #ef4444;
+}
+
+.formula-box code {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.formula-note {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  margin-left: 8px;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.badge.error {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.physics-reasons {
+  list-style: none;
+  padding: 0;
+  counter-reset: physics-counter;
+}
+
+.physics-reasons > li {
+  counter-increment: physics-counter;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.physics-reasons > li::before {
+  content: counter(physics-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.decay-table {
+  width: 100%;
+  margin: 12px 0;
+  border-collapse: collapse;
+}
+
+.decay-table th,
+.decay-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.decay-table thead {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.decay-table tbody tr {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.decay-table td:last-child {
+  font-family: monospace;
+  color: #60a5fa;
+}
+
+.comparison-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.comparison-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.comparison-item.incorrect-bg {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.comparison-item.correct-bg {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.comparison-item .label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.comparison-item .value {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.comparison-item .value.large {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.balance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+.balance-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.balance-table .value-cell {
+  text-align: right;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.balance-table tr.success {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.balance-table tr.error {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-list li {
+  padding: 12px;
+  margin-bottom: 8px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 24px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Scrollbar personalizado */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 24px;
+    max-height: 95vh;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .comparison-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .comparison-item .value {
+    width: 100%;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+}

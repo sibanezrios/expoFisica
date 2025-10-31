@@ -1,0 +1,185 @@
+/**
+ * Estilos para la mini-gráfica de Fuerza vs Distancia
+ */
+
+.force-distance-graph {
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  border: 2px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.force-distance-graph h4 {
+  margin: 0 0 10px 0;
+  color: #60A5FA;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.graph-description {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.graph-description strong {
+  color: #E2E8F0;
+}
+
+/* Cuadro de fórmulas */
+.formula-box {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+  border: 2px solid #3B82F6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.formula-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.formula-label {
+  color: #94A3B8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formula-text {
+  color: #60A5FA;
+  font-size: 1.4rem;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.formula-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-row {
+  display: grid;
+  grid-template-columns: 30px 30px 1fr;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+}
+
+.legend-row strong {
+  color: #60A5FA;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.legend-row span:nth-child(2) {
+  color: #94A3B8;
+  text-align: center;
+  font-weight: 500;
+}
+
+.legend-row span:nth-child(3) {
+  color: #E2E8F0;
+}
+
+.force-graph-svg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+  background: #0F172A;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.graph-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #CBD5E1;
+  font-size: 0.85rem;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dot.near {
+  background: #3B82F6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.legend-dot.far {
+  background: #64748B;
+  box-shadow: 0 0 4px rgba(100, 116, 139, 0.4);
+}
+
+.legend-item strong {
+  color: #E2E8F0;
+}
+
+.graph-note {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid #3B82F6;
+  border-radius: 4px;
+  color: #CBD5E1;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.graph-note strong {
+  color: #60A5FA;
+  font-weight: 600;
+}
+
+.graph-note em {
+  color: #FBBF24;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .force-distance-graph {
+    padding: 15px;
+  }
+  
+  .force-distance-graph h4 {
+    font-size: 1rem;
+  }
+  
+  .graph-description,
+  .legend-item,
+  .graph-note {
+    font-size: 0.8rem;
+  }
+}
