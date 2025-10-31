@@ -61,11 +61,11 @@ export interface BoardDimensions {
 }
 
 export const DEFAULT_VARIABLES: PhysicsVariables = {
-  trainMass: 0.5,           // 500 gramos
+  trainMass: 0.2,           // 200 gramos (más ligero)
   magnetDistance: 4,        // 4 cm entre imanes
-  magnetType: 'neodymium',  // Neodimio por defecto
-  magnetCount: 10,          // 10 imanes por carril
-  railSeparation: 6,        // 6 cm entre hileras
+  magnetType: 'neodymium',  // Neodimio (el más fuerte)
+  magnetCount: 16,          // 16 imanes por carril (más fuerza)
+  railSeparation: 6,        // 6 cm entre hileras (óptimo)
   motorDirection: 1,        // adelante
 };
 
