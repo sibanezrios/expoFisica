@@ -15,7 +15,7 @@
   border: 1px solid #1b2744;
   border-radius: 16px;
   padding: 18px 16px 20px;
-  box-shadow: var(--shadow);
+  box-shadow: va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r(--shadow);
 }
 
 .formulas-title {
@@ -91,7 +91,34 @@
 .math-line::-webkit-scrollbar-track { background: transparent; }
 
 /* Ajustes en pantallas muy pequeñas */
-@media (max-width: 420px) {
-  .physics-grid { grid-template-columns: 1fr; }
-  .physics-card { min-height: 120px; }
+
+@media (max-width: 600px) {
+  .physics-formulas-section {
+    padding: 10px 2px 14px 2px;
+    border-radius: 10px;
+  }
+  .formulas-title {
+    font-size: 1.05rem;
+    margin-left: 2px;
+  }
+  .physics-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .physics-card {
+    min-height: 90px;
+    padding: 8px 4px 8px 4px;
+    font-size: 0.97em;
+  }
+  .math-line {
+    font-size: 0.93em;
+    padding: 4px 2px;
+    max-width: 98vw;
+  }
+}
+
+/* Permite scroll horizontal global si alguna fórmula es muy ancha */
+.physics-formulas-section {
+  overflow-x: auto;
+  max-width: 100vw;
 }
