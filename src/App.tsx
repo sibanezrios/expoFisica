@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🚄 Simulación de Levitación Magnética</h1>
+        <h1>🚄 Simulación de levitación magnética</h1>
         <p>Sistema de vagón con imanes permanentes</p>
       </header>
 

@@ -134,7 +134,7 @@ export const SimulationCanvas: React.FC<SimulationCanvasProps> = ({
   return (
     <div className="simulation-container">
       <div className="canvas-wrapper">
-        <h3>📊 Simulación en Vivo</h3>
+        <h3>📊 Simulación en vivo</h3>
         <div className="canvas-frame">
           <canvas
             ref={canvasRef}

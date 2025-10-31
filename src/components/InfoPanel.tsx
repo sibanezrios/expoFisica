@@ -76,7 +76,7 @@ export const InfoPanel: React.FC = () => {
               </section>
 
               <section className="info-section">
-                <h3>🧲 Principio de Levitación:</h3>
+                <h3>🧲 Principio de levitación:</h3>
                 <p>
                   La levitación se produce por <strong>repulsión magnética</strong> entre polos iguales 
                   (N-N o S-S) ubicados en los rieles y en el vagón. Para que el vagón levite, la fuerza 
@@ -89,7 +89,7 @@ export const InfoPanel: React.FC = () => {
               </section>
 
               <section className="info-section">
-                <h3>🔬 Modelo Físico: Ley del Cubo Inverso</h3>
+                <h3>🔬 Modelo físico: ley del cubo inverso</h3>
                 <p>
                   Este simulador implementa un <strong>modelo físico realista</strong> donde cada imán 
                   contribuye individualmente según su distancia al vagón, siguiendo la <strong>ley del 
@@ -106,12 +106,12 @@ export const InfoPanel: React.FC = () => {
               </section>
 
               <section className="info-section">
-                <h3>🔬 Visualización de Configuración Magnética:</h3>
+                <h3>🔬 Visualización de configuración magnética:</h3>
                 <MagnetVisualization />
               </section>
 
               <section className="info-section">
-                <h3>📏 Factor de Estabilidad:</h3>
+                <h3>📏 Factor de estabilidad:</h3>
                 <p>
                   Este valor representa qué tan simétrico y alineado está el campo magnético entre los 
                   dos rieles. Un 100% indica que los imanes están perfectamente enfrentados, garantizando 

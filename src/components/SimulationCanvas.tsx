@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
+import { FormulasPanel } from './FormulasPanel';
 import type { PhysicsVariables, SimulationState } from '../types';
 import { BOARD_SIZE, MAGNET_PROPERTIES } from '../types';
 import './SimulationCanvas.css';
@@ -144,7 +145,7 @@ export const SimulationCanvas: React.FC<SimulationCanvasProps> = ({
       </div>
       
       <div className="physics-info-panel">
-        <h3>⚡ Estado Físico</h3>
+        <h3>⚡ Estado físico</h3>
         <div className="physics-grid">
           <div className={`physics-item ${state.isLevitating ? 'levitating' : 'not-levitating'}`}>
             <div className="physics-item-label">Estado</div>
@@ -233,6 +234,7 @@ export const SimulationCanvas: React.FC<SimulationCanvasProps> = ({
             </div>
           </div>
         </div>
+    <FormulasPanel />
       </div>
     </div>
   );

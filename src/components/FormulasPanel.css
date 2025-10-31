@@ -1,0 +1,97 @@
+/* === Tema (ajústalo si tienes variables globales) === */
+:root {
+  --bg-panel: #0f1628;       /* azul oscuro panel */
+  --bg-card: rgba(18, 27, 46, 0.85);
+  --bg-card-edge: #1d2a48;
+  --text-title: #c9d7ff;
+  --text-soft: #9ab0e5;
+  --accent: #6ea8ff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.physics-formulas-section {
+  margin-top: 1.5rem;
+  background: linear-gradient(180deg, rgba(15,22,40,0.75), rgba(15,22,40,0.45));
+  border: 1px solid #1b2744;
+  border-radius: 16px;
+  padding: 18px 16px 20px;
+  box-shadow: var(--shadow);
+}
+
+.formulas-title {
+  margin: 0 0 12px 6px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text-title);
+}
+
+.physics-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* === Tarjeta === */
+.physics-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-edge);
+  border-radius: 14px;
+  padding: 12px 12px 10px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  color: #e9eeff;
+  min-height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.physics-card__header {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+}
+
+/* === Líneas de fórmulas ===
+   Evitan desbordes y mantienen tamaño legible */
+.math-line {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 6px 8px;
+
+  /* Claves para no salirse */
+  overflow-x: auto;        /* scroll suave si es muy larga */
+  white-space: nowrap;     /* que no rompa a otra línea rara */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Quita márgenes por defecto del display KaTeX */
+.math-line .katex-display {
+  margin: 0 !important;
+}
+
+/* Tamaños responsivos:
+   - símbolo más pequeño
+   - fórmula principal media
+   - nota aún más compacta */
+.math-line .katex { font-size: clamp(0.9rem, 1.6vw, 1.05rem); }
+.math-line--symbol .katex { font-size: clamp(0.85rem, 1.4vw, 0.98rem); color: var(--accent); }
+.math-line--note .katex   { font-size: clamp(0.78rem, 1.2vw, 0.92rem); opacity: 0.9; }
+
+/* Oculta scrollbar en navegadores modernos, pero mantiene scroll */
+.math-line::-webkit-scrollbar { height: 6px; }
+.math-line::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+}
+.math-line::-webkit-scrollbar-track { background: transparent; }
+
+/* Ajustes en pantallas muy pequeñas */
+@media (max-width: 420px) {
+  .physics-grid { grid-template-columns: 1fr; }
+  .physics-card { min-height: 120px; }
+}
